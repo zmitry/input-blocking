@@ -46,7 +46,6 @@ function onChange(e) {
     });
     event.bypass = true;
     e.target.dispatchEvent(event);
-    eventWeakMap.set(event, true);
   });
   e.stopPropagation();
   e.preventDefault();
