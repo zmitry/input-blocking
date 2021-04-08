@@ -1,0 +1,45 @@
+.validating::after,
+.validating::before {
+  top: 50%;
+  left: 50%;
+  bottom: 0;
+  right: 0;
+  display: block;
+  position: fixed;
+  z-index: 1;
+}
+.validating::after {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  text-align: center;
+  content: "Validating your file";
+  background: rgb(209, 250, 211);
+
+  max-width: 60ch;
+  min-width: 40ch;
+  transform: translateX(-50%) translateY(-50%);
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.validating body {
+  opacity: 0.4
+}
+
+.blocked::after {
+  content: "Your are not allowed to do that";
+  background: hsl(360, 80%, 90%);
+}
+.blocked body {
+  display: none;
+}
+
+.validating::before {
+  content: "";
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3Csvg width='270' height='27' viewBox='0 0 264 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M28.2609 9.69255L24.8247 13.1287L28.2609 16.5649L31.6971 13.1287L28.2609 9.69255Z' fill='%23373D48'/%3E%3Cpath d='M18.9779 18.9779C15.7487 22.207 10.5121 22.207 7.28088 18.9779C4.05172 15.7487 4.04961 10.5121 7.28088 7.28088C10.51 4.04961 15.7487 4.04961 18.9779 7.28088L21.7626 10.0656L25.1982 6.62999L22.4135 3.84529C17.2864 -1.28176 8.97234 -1.28176 3.84529 3.84529C-1.28176 8.97234 -1.28176 17.2843 3.84529 22.4114C8.97445 27.5384 17.2864 27.5384 22.4135 22.4114L25.1982 19.6267L21.7626 16.1911L18.9779 18.9779Z' fill='%23373D48'/%3E%3Cpath d='M10.3461 10.3457C8.80845 11.8834 8.80845 14.3774 10.3461 15.9151C11.8859 17.4528 14.3778 17.4528 15.9155 15.9151L18.7002 13.1304L15.9155 10.3457C14.3778 8.80591 11.8838 8.80802 10.3461 10.3457Z' fill='%2339CEF7'/%3E%3C/svg%3E%0A");
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+}

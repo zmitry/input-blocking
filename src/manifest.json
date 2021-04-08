@@ -1,0 +1,21 @@
+{
+  "name": "Blocking cyberhaven",
+  "description": "Demo",
+  "version": "1.0",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "matches": ["https://*/*", "http://*/*"],
+      "js": ["./index.js"],
+      "css": ["./style.css"],
+      "all_frames": true,
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "matches": ["https://*/*", "http://*/*"],
+      "resources": ["index.js", "style.css"]
+    }
+  ]
+}
